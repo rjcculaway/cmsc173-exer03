@@ -1,8 +1,11 @@
 import { CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { ShoppingCartIcon } from "@heroicons/react/outline";
 
 import styles from "./Navbar.module.css";
+import { useAtom } from "jotai";
+import { accentColorAtom } from "pages";
 
 interface CustomHoverColor extends CSSProperties {
   "--accent-color": String;
@@ -51,7 +54,9 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({ label, link = "" }) => {
 };
 
 const Navbar: React.FC = () => {
-  const hover_color: CustomHoverColor = { "--accent-color": "yellowgreen" };
+  const [ accentColor, setAccentColor ] = useAtom(accentColorAtom);
+  const hover_color: CustomHoverColor = { "--accent-color": accentColor };
+  
   return (
     <nav className={styles.navbar} style={hover_color}>
       <h1 className={styles.logotype}>PLK-01</h1>
@@ -60,6 +65,7 @@ const Navbar: React.FC = () => {
           <NavbarButton label={link.label} link={link.link} key={i} />
         ))}
       </div>
+      <ShoppingCartIcon className={styles.shopping_cart_icon} style={hover_color} onClick={() => setAccentColor("pink")} />
     </nav>
   );
 };

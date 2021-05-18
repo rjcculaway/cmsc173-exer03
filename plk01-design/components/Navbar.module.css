@@ -57,3 +57,14 @@
 .navbarbutton_underline:hover {
   transform: scaleX(1);
 }
+
+.shopping_cart_icon {
+  width: 24px;
+  transition: color 0.125s ease;
+  color: white;
+}
+
+.shopping_cart_icon:hover {
+  transition: color 0.125s ease;
+  color: var(--accent-color);
+}
