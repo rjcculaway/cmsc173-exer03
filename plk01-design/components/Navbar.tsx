@@ -27,7 +27,7 @@ const links: { label: String; link: String }[] = [
   },
   {
     label: "Design System",
-    link: "",
+    link: "/design-system",
   },
 ];
 

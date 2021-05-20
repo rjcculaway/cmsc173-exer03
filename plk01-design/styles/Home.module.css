@@ -5,5 +5,14 @@
 }
 
 .main_content {
+  display: flex;
   flex-grow: 1;
+  align-content: center;
+}
+
+.design_system_content {
+  display: flex;
+  flex-grow: 1;
+  align-content: center;
+  justify-content: center;
 }
