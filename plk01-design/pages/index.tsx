@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { atom } from 'jotai';
-import Navbar from 'components/Navbar';
-
+import Navbar from '@/components/Navbar';
+import MainPageContent from '@/components/MainPageContent';
 
 import styles from 'styles/Home.module.css';
 
@@ -17,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main_content}>
-        asdasd
+        <MainPageContent />
       </div>
       <Navbar />
     </div>

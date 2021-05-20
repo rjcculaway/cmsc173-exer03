@@ -1,0 +1,65 @@
+.product_glass_pane {
+  position: absolute;
+  top: 32%;
+  left: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.product_heading {
+  font-weight: 800;
+  font-size: 5rem;
+  background: rgba(255, 255, 255, 0.625);
+  margin: 0;
+  margin-left: -1.25rem;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+  backdrop-filter: blur(2px);
+}
+
+.caption {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 667px) and (orientation : landscape){
+/* Styles */
+  .product_heading {
+    font-size: 2.5rem;
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 667px) and (orientation : portrait){
+/* Styles */
+  .product_heading {
+    font-size: 2.5rem;
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+}
+
+.shop_button {
+  transition: background-color 100ms ease;
+  background: black;
+  color: white;
+  font-weight: 800;
+  padding: 0.25rem 0.625rem 0.25rem 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.shop_button:hover {
+  transition: background-color 100ms ease;
+  background: var(--accent-color);
+}

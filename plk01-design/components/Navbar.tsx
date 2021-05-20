@@ -1,15 +1,11 @@
-import { CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
 
 import styles from "./Navbar.module.css";
+import { CustomHoverColor } from "../interface/CustomHoverColor";
 import { useAtom } from "jotai";
 import { accentColorAtom } from "pages";
-
-interface CustomHoverColor extends CSSProperties {
-  "--accent-color": String;
-};
 
 interface NavbarButtonProps {
   label: String;
@@ -37,7 +33,7 @@ const links: { label: String; link: String }[] = [
 
 const NavbarButton: React.FC<NavbarButtonProps> = ({ label, link = "" }) => {
   const router = useRouter();
-  const hover_color: CustomHoverColor = { "--accent-color": "yellowgreen" };
+
   return (
     <Link href={`${link}`}>
       <a

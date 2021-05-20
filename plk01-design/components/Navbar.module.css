@@ -1,11 +1,9 @@
 .navbar {
   bottom: 0;
 
-  grid-area: navbar;
-
   padding: 0.0625rem 1.5rem 0.0625rem 1.5rem;
-  background-color: rgba(0, 0, 0, 0.875);
-  background-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
 
   color: white;
 
@@ -14,10 +12,17 @@
   justify-items: center;
 }
 
-.logotype:before {
-  content: "";
-  background: pink;
-  border-bottom: 4px none var(--accent-color);
+@media only screen and (min-device-width: 320px) and (max-device-width: 667px){
+  .navbarbutton {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 667px){
+/* Styles */
+  .navbarbutton {
+    display: none;
+  }
 }
 
 .logotype {
@@ -28,12 +33,13 @@
 .navbarbuttons {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .navbarbutton {
   transition: color 0.125s ease;
   color: white;
-  filter: brightness(1);
+  filter: brightness(1); 
 }
 
 .navbarbutton:hover {
@@ -47,15 +53,12 @@
 
 .navbarbutton:not(:last-child) {
   margin-right: 3rem;
+  margin-bottom: 0rem;
 }
 
 .navbarbutton_active {
   composes: navbarbutton;
   color: var(--accent-color);
-}
-
-.navbarbutton_underline:hover {
-  transform: scaleX(1);
 }
 
 .shopping_cart_icon {
