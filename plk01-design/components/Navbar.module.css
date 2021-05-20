@@ -41,7 +41,7 @@
   transition: color 0.125s ease;
   color: white;
   filter: brightness(1); 
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
 
 .navbarbutton:hover {
@@ -73,6 +73,12 @@
   width: 24px;
   transition: color 0.125s ease;
   color: white;
+}
+
+@media only screen and (min-device-width: 800px) {
+  .shopping_cart_icon {
+    display: none;
+  }
 }
 
 .shopping_cart_icon:hover {
