@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ShoppingCartIcon } from "@heroicons/react/outline";
+import { MenuIcon, ShoppingCartIcon } from "@heroicons/react/outline";
 
 import styles from "./Navbar.module.css";
 import { CustomHoverColor } from "../interface/CustomHoverColor";
 import { useAtom } from "jotai";
-import { accentColorAtom } from "pages";
+import { accentColorAtom } from "atoms/accentColorAtom";
 
 interface NavbarButtonProps {
   label: String;
@@ -55,6 +55,7 @@ const Navbar: React.FC = () => {
   
   return (
     <nav className={styles.navbar} style={hover_color}>
+      <MenuIcon className={styles.menu_icon} style={hover_color} />
       <h1 className={styles.logotype}>PLK-01</h1>
       <div className={styles.navbarbuttons}>
         {links.map((link, i) => (

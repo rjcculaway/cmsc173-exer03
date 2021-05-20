@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useAtom } from "jotai";
-import { accentColorAtom } from "pages";
+import { accentColorAtom } from "atoms/accentColorAtom";
 import styles from "./ProductInformation.module.css";
 
 import { CustomHoverColor } from "interface/CustomHoverColor";

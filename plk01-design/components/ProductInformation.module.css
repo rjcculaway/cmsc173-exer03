@@ -1,9 +1,8 @@
 .product_glass_pane {
   position: absolute;
-  top: 32%;
-  left: 10%;
-  margin-top: auto;
-  margin-bottom: auto;
+  top: calc(25vh - 4rem);
+  left: calc(10% - 4rem);
+  margin: 4rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -22,31 +21,28 @@
 }
 
 .caption {
+  max-width: 32ch;
   font-size: 2rem;
   font-weight: 100;
   margin: 0;
 }
 
-/* iPhone 5 ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 667px) and (orientation : landscape){
+@media only screen and (min-device-width: 0px) and (max-device-width: 1279px){
 /* Styles */
+  .product_glass_pane {
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    top: 0rem;
+  }
+
   .product_heading {
-    font-size: 2.5rem;
+    display: none;
   }
 
   .caption {
     font-size: 1rem;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 667px) and (orientation : portrait){
-/* Styles */
-  .product_heading {
-    font-size: 2.5rem;
-  }
-
-  .caption {
-    font-size: 1rem;
+    font-weight: 300;
   }
 }
 

@@ -1,11 +1,8 @@
 import Head from 'next/head';
-import { atom } from 'jotai';
 import Navbar from '@/components/Navbar';
 import MainPageContent from '@/components/MainPageContent';
 
 import styles from 'styles/Home.module.css';
-
-export const accentColorAtom = atom("limegreen");
 
 export default function Home() {
   return (
