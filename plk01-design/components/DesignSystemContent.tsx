@@ -55,15 +55,15 @@ const DesignSystemContent: React.FC = () => {
           <header>
             <h2 className={styles.header_points}>Transparency</h2>
           </header>
-          <div style={{position: "static"}}>
+          <div style={{ position: "static" }}>
             <div className={styles.transparency_image}>
               <Image src={orange} layout="fill" objectFit="cover" />
               <p className={styles.transparency_description}>
-                The PLK Design System seeks to emulate the familiar experience when
-                visiting our stores. Those who have visited our store have noticed
-                its “open” feel with our generous use of glass. The PLK Design
-                System incorporates this through “frosted glass” effects, ensuring
-                that your attention remains on our products.
+                The PLK Design System seeks to emulate the familiar experience
+                when visiting our stores. Those who have visited our store have
+                noticed its “open” feel with our generous use of glass. The PLK
+                Design System incorporates this through “frosted glass” effects,
+                ensuring that your attention remains on our products.
               </p>
             </div>
           </div>
@@ -83,10 +83,14 @@ const DesignSystemContent: React.FC = () => {
               />
             </div>
             <p className={styles.colors_description}>
-              Our main colors, <span className={styles.highlighter_black}>black and white</span>, come from our name: 0 and 1. The
-              reason for this is two-fold: these two colors maximize contrast
-              and visibility, and allow us to use a <span className={styles.highlighter}>third color</span> that is based on
-              the accent colors of our products.
+              Our main colors,{" "}
+              <span className={styles.highlighter_black}>black and white</span>,
+              come from our name: 0 and 1. The reason for this is two-fold:
+              these two colors maximize contrast and visibility, and allow us to
+              use a <span className={styles.highlighter}>third color</span> that
+              is based on the accent colors of our products. You can click the
+              "Next" button at the upper right corner of the home page to see
+              this in action.
             </p>
           </div>
         </section>
