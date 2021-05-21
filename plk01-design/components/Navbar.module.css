@@ -63,14 +63,17 @@
 .navbarbutton_active {
   composes: navbarbutton;
   color: black;
+  transition: background-color 125ms ease;
   background-color: var(--accent-color);
 }
 
 .navbarbutton_active:hover {
+  transition: background-color 125ms ease;
   background-color: black;
 }
 
 .navbarbutton_active:active {
+  transition: background-color 125ms ease;
   background-color: white;
   filter: brightness(1);
 }
