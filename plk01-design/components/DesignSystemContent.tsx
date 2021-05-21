@@ -5,9 +5,9 @@ import { accentColorAtom } from "atoms/accentColorAtom";
 import styles from "./DesignSystemContent.module.css";
 import { CustomHoverColor } from "interface/CustomHoverColor";
 
-import store from "assets/img/pexels-j-lee-6847584.jpg";
-import orange from "assets/img/pexels-ORANGE.jpg";
-import colors from "assets/img/colors.png";
+import store from "public/pexels-j-lee-6847584.jpg";
+import orange from "public/pexels-ORANGE.jpg";
+import colors from "public/colors.png";
 
 const DesignSystemContent: React.FC = () => {
   const [accentColor, setAccentColor] = useAtom(accentColorAtom);

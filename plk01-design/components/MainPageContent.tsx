@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import { useAtom } from "jotai";
 import { accentColorAtom } from "atoms/accentColorAtom";
@@ -8,8 +8,8 @@ import ProductInformation from "./ProductInformation";
 
 import styles from "./MainPageContent.module.css";
 
-import camera from "../assets/img/pexels-math-90946-zoomed.png";
-import oranges from "assets/img/pexels-ORANGE2.jpg";
+import camera from "public/pexels-math-90946-zoomed.png";
+import oranges from "public/pexels-ORANGE2.jpg";
 import { CustomHoverColor } from "interface/CustomHoverColor";
 
 const MainPageContent: React.FC = () => {
@@ -20,7 +20,7 @@ const MainPageContent: React.FC = () => {
   const [caption1, setCaption1] = useAtom(caption1Atom);
   const [caption2, setCaption2] = useAtom(caption2Atom);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setProductImage(camera);
     setHeading("The [P]hoto Series");
     setCaption1("Superior low-light performance.");
