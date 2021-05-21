@@ -1,6 +1,6 @@
 .product_glass_pane {
   position: absolute;
-  top: calc(25vh - 4rem);
+  top: calc(27vh - 4rem);
   left: calc(10% - 4rem);
   margin: 4rem;
   display: flex;

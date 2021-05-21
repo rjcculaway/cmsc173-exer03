@@ -9,3 +9,38 @@
 .content_container {
   display: flex;
 }
+
+.next_button {
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+
+  font-family: "JetBrains Mono";
+  font-size: 1rem;
+  border: none;
+
+  transition: background-color 100ms ease;
+  background: black;
+  color: white;
+  font-weight: 800;
+  padding: 0.25rem 0.625rem 0.25rem 0.625rem;
+}
+
+.shop_button {
+  transition: background-color 100ms ease;
+  background: black;
+  color: white;
+  font-weight: 800;
+  padding: 0.25rem 0.625rem 0.25rem 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.next_button:active {
+  filter: brightness(0.5);
+}
+
+.next_button:hover {
+  transition: background-color 100ms ease;
+  background: var(--accent-color);
+  cursor: pointer; 
+}
