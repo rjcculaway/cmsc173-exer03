@@ -12,20 +12,22 @@ import { CustomHoverColor } from "interface/CustomHoverColor";
 const MainPageContent: React.FC = () => {
   const [accentColor, setAccentColor] = useAtom(accentColorAtom);
   const hover_color: CustomHoverColor = { "--accent-color": accentColor };
-  const [, setProductImage] = useAtom(productImageAtom);
+  const [productImage, setProductImage] = useAtom(productImageAtom);
   const [heading, setHeading] = useAtom(headingAtom);
   const [caption1, setCaption1] = useAtom(caption1Atom);
   const [caption2, setCaption2] = useAtom(caption2Atom);
 
   useEffect(() => {
-    setProductImage("pexels-math-90946-zoomed.png");
+    setProductImage("pexels-math-90946-zoomed.jpg");
     setHeading("The [P]hoto Series");
     setCaption1("Superior low-light performance.");
     setCaption2("Rugged for the adventure of a lifetime.");
     setAccentColor("#fe6723");
   }, []);
   return (
-    <div className={styles.content_container}>
+    <div className={styles.content_container}  style={{
+      backgroundImage: `url(${productImage})`
+    }}>
       <button
         className={styles.next_button}
         style={hover_color}

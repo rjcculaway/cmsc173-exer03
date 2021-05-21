@@ -16,11 +16,7 @@ export default function Home() {
         <meta name="description" content="Design for an e-commerce website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.main_content} style={{
-        backgroundImage: `url(${productImage})`,
-        objectFit: "cover",
-        objectPosition: "right"
-      }}>
+      <div className={styles.main_content}>
         <MainPageContent />
       </div>
       <Navbar />

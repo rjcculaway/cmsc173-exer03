@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Image from "next/image";
 import { useAtom } from "jotai";
 import { accentColorAtom } from "atoms/accentColorAtom";
 import styles from "./DesignSystemContent.module.css";
@@ -13,15 +12,7 @@ const DesignSystemContent: React.FC = () => {
   const hover_color: CustomHoverColor = { "--accent-color": accentColor };
 
   return (
-    <>
-      <div className={styles.bg}>
-        <Image
-          src="/pexels-j-lee-6847584.jpg"
-          layout="fill"
-          objectFit="cover"
-          className={styles.bg_image}
-        />
-      </div>
+    <div className={styles.bg}>
       <div className={styles.content_container} style={hover_color}>
         <section>
           <header>
@@ -51,9 +42,8 @@ const DesignSystemContent: React.FC = () => {
           <header>
             <h2 className={styles.header_points}>Transparency</h2>
           </header>
-          <div style={{ position: "static" }}>
+          <div style={{ width: "100%" }}>
             <div className={styles.transparency_image}>
-              <Image src="/pexels-ORANGE.jpg" layout="fill" objectFit="cover" />
               <p className={styles.transparency_description}>
                 The PLK Design System seeks to emulate the familiar experience
                 when visiting our stores. Those who have visited our store have
@@ -70,12 +60,10 @@ const DesignSystemContent: React.FC = () => {
           </header>
           <div className={styles.colors_row}>
             <div className={styles.colors_sample}>
-              <Image
+              <img
                 src="/colors.png"
-                layout="fixed"
                 width="250px"
                 height="250px"
-                objectFit="contain"
               />
             </div>
             <p className={styles.colors_description}>
@@ -115,7 +103,7 @@ const DesignSystemContent: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
