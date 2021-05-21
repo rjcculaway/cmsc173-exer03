@@ -5,10 +5,6 @@ import { accentColorAtom } from "atoms/accentColorAtom";
 import styles from "./DesignSystemContent.module.css";
 import { CustomHoverColor } from "interface/CustomHoverColor";
 
-import store from "public/pexels-j-lee-6847584.jpg";
-import orange from "public/pexels-ORANGE.jpg";
-import colors from "public/colors.png";
-
 const DesignSystemContent: React.FC = () => {
   const [accentColor, setAccentColor] = useAtom(accentColorAtom);
   useEffect(() => {
@@ -20,7 +16,7 @@ const DesignSystemContent: React.FC = () => {
     <>
       <div className={styles.bg}>
         <Image
-          src={store}
+          src="/pexels-j-lee-6847584.jpg"
           layout="fill"
           objectFit="cover"
           className={styles.bg_image}
@@ -57,7 +53,7 @@ const DesignSystemContent: React.FC = () => {
           </header>
           <div style={{ position: "static" }}>
             <div className={styles.transparency_image}>
-              <Image src={orange} layout="fill" objectFit="cover" />
+              <Image src="/pexels-ORANGE.jpg" layout="fill" objectFit="cover" />
               <p className={styles.transparency_description}>
                 The PLK Design System seeks to emulate the familiar experience
                 when visiting our stores. Those who have visited our store have
@@ -75,7 +71,7 @@ const DesignSystemContent: React.FC = () => {
           <div className={styles.colors_row}>
             <div className={styles.colors_sample}>
               <Image
-                src={colors}
+                src="/colors.png"
                 layout="fixed"
                 width="250px"
                 height="250px"

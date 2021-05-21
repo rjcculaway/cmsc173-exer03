@@ -8,8 +8,6 @@ import ProductInformation from "./ProductInformation";
 
 import styles from "./MainPageContent.module.css";
 
-import camera from "public/pexels-math-90946-zoomed.png";
-import oranges from "public/pexels-ORANGE2.jpg";
 import { CustomHoverColor } from "interface/CustomHoverColor";
 
 const MainPageContent: React.FC = () => {
@@ -21,7 +19,7 @@ const MainPageContent: React.FC = () => {
   const [caption2, setCaption2] = useAtom(caption2Atom);
 
   useEffect(() => {
-    setProductImage(camera);
+    setProductImage("/pexels-math-90946-zoomed.png");
     setHeading("The [P]hoto Series");
     setCaption1("Superior low-light performance.");
     setCaption2("Rugged for the adventure of a lifetime.");
@@ -33,7 +31,7 @@ const MainPageContent: React.FC = () => {
         className={styles.next_button}
         style={hover_color}
         onClick={() => {
-          setProductImage(oranges);
+          setProductImage("/pexels-ORANGE2.jpg");
           setAccentColor("#fc9d00");
           setHeading("The [K]ahel Series");
           setCaption1("Anything and everything orange.");
