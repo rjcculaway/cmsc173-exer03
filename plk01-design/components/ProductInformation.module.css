@@ -55,6 +55,10 @@
   margin-top: 1.25rem;
 }
 
+.shop_button:active {
+  filter: brightness(0.5);
+}
+
 .shop_button:hover {
   transition: background-color 100ms ease;
   background: var(--accent-color);

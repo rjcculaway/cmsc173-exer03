@@ -1,12 +1,114 @@
+.bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
 .top_level_heading {
   font-size: 5rem;
+  font-weight: 800;
+}
+
+.header_points {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.description {
+  font-size: 1.25rem;
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+.colors_description {
+  composes: description;
+  flex-basis: 500px;
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 
 .content_container {
+  background: white;
   display: flex;
   flex-direction: column;
   padding: 2rem;
   margin-bottom: 4em;
   max-width: 960px;
   justify-self: center;
+}
+
+.header_sample {
+  font-size: 5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.content_sample {
+  margin: 0; 
+}
+
+.colors_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.colors_sample {
+  margin-right: 2rem;
+}
+
+.two_column {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.two_column_child {
+  display: flex;
+  justify-content: center;
+}
+
+.two_column_child:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.samples {
+  composes: two_column_child;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sample_item {
+  margin: 0.5rem;
+}
+
+.sample_caption {
+  margin: 0;
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.transparency_image {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  padding: 2rem;
+}
+
+.transparency_description {
+  composes: description; 
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2rem;
+  margin: 2rem;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+.highlighter {
+  background: var(--accent-color);
+  padding: 0 0.25rem 0 0.25rem;
 }

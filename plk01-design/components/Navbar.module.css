@@ -46,13 +46,11 @@
 
 .navbarbutton:hover {
   transition: color 0.125s ease;
-  filter: brightness(1.25); 
   color: var(--accent-color);
 }
 
 .navbarbutton:active {
   filter: brightness(0.5);
-  color: white;
 }
 
 .navbarbutton:not(:last-child) {
@@ -62,10 +60,15 @@
 
 .navbarbutton_active {
   composes: navbarbutton;
+  color: black;
   background-color: var(--accent-color);
 }
 
 .navbarbutton_active:hover {
+  background-color: black;
+}
+
+.navbarbutton_active:active {
   background-color: white;
 }
 
@@ -75,9 +78,9 @@
   color: white;
 }
 
-@media only screen and (min-device-width: 800px) {
-  .shopping_cart_icon {
-    display: none;
+@media only screen and (max-device-width: 800px) {
+  .menu_icon {
+    display: block;
   }
 }
 
@@ -90,4 +93,5 @@
   composes: shopping_cart_icon;
   margin-left: 0;
   margin-right: 1rem;
+  display: none;
 }
