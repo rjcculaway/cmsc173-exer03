@@ -83,7 +83,7 @@ const DesignSystemContent: React.FC = () => {
               />
             </div>
             <p className={styles.colors_description}>
-              Our main colors, black and white, come from our name: 0 and 1. The
+              Our main colors, <span className={styles.highlighter_black}>black and white</span>, come from our name: 0 and 1. The
               reason for this is two-fold: these two colors maximize contrast
               and visibility, and allow us to use a <span className={styles.highlighter}>third color</span> that is based on
               the accent colors of our products.
