@@ -6,6 +6,7 @@ import styles from "./Navbar.module.css";
 import { CustomHoverColor } from "../interface/CustomHoverColor";
 import { useAtom } from "jotai";
 import { accentColorAtom } from "atoms/accentColorAtom";
+import { currentSeriesAtom, series } from "atoms/productInfoAtom";
 
 interface NavbarButtonProps {
   label: String;
@@ -50,19 +51,33 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({ label, link = "" }) => {
 };
 
 const Navbar: React.FC = () => {
-  const [ accentColor, setAccentColor ] = useAtom(accentColorAtom);
-  const hover_color: CustomHoverColor = { "--accent-color": accentColor };
-  
+  const [currentSeries] = useAtom(currentSeriesAtom);
+
   return (
-    <nav className={styles.navbar} style={hover_color}>
-      <MenuIcon className={styles.menu_icon} style={hover_color} />
+    <nav
+      className={styles.navbar}
+      style={
+        { "--accent-color": series[currentSeries].color } as CustomHoverColor
+      }
+    >
+      <MenuIcon
+        className={styles.menu_icon}
+        style={
+          { "--accent-color": series[currentSeries].color } as CustomHoverColor
+        }
+      />
       <h1 className={styles.logotype}>PLK-01</h1>
       <div className={styles.navbarbuttons}>
         {links.map((link, i) => (
           <NavbarButton label={link.label} link={link.link} key={i} />
         ))}
       </div>
-      <ShoppingCartIcon className={styles.shopping_cart_icon} style={hover_color} onClick={() => setAccentColor("pink")} />
+      <ShoppingCartIcon
+        className={styles.shopping_cart_icon}
+        style={
+          { "--accent-color": series[currentSeries].color } as CustomHoverColor
+        }
+      />
     </nav>
   );
 };

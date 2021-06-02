@@ -1,14 +1,10 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import MainPageContent from '@/components/MainPageContent';
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import MainPageContent from "@/components/MainPageContent";
 
-import { productImageAtom } from 'atoms/productImageAtom';
-import { useAtom } from 'jotai';
-
-import styles from 'styles/Home.module.css';
+import styles from "styles/Home.module.css";
 
 export default function Home() {
-  const [productImage, ] = useAtom(productImageAtom);
   return (
     <div className={styles.main_container}>
       <Head>
@@ -21,5 +17,5 @@ export default function Home() {
       </div>
       <Navbar />
     </div>
-  )
+  );
 }

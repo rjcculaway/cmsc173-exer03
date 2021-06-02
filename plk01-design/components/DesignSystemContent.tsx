@@ -1,19 +1,24 @@
 import { useEffect } from "react";
 import { useAtom } from "jotai";
-import { accentColorAtom } from "atoms/accentColorAtom";
 import styles from "./DesignSystemContent.module.css";
+import { series, currentSeriesAtom } from "atoms/productInfoAtom";
 import { CustomHoverColor } from "interface/CustomHoverColor";
 
 const DesignSystemContent: React.FC = () => {
-  const [accentColor, setAccentColor] = useAtom(accentColorAtom);
+  const [currentSeries, setCurrentSeries] = useAtom(currentSeriesAtom);
+
   useEffect(() => {
-    setAccentColor("#ffe981");
+    setCurrentSeries(2);
   }, []);
-  const hover_color: CustomHoverColor = { "--accent-color": accentColor };
 
   return (
     <div className={styles.bg}>
-      <div className={styles.content_container} style={hover_color}>
+      <div
+        className={styles.content_container}
+        style={
+          { "--accent-color": series[currentSeries].color } as CustomHoverColor
+        }
+      >
         <section>
           <header>
             <h1 className={styles.top_level_heading}>The PLK Design System</h1>
@@ -60,11 +65,7 @@ const DesignSystemContent: React.FC = () => {
           </header>
           <div className={styles.colors_row}>
             <div className={styles.colors_sample}>
-              <img
-                src="/colors.png"
-                width="250px"
-                height="250px"
-              />
+              <img src="/colors.png" width="250px" height="250px" />
             </div>
             <p className={styles.colors_description}>
               Our main colors,{" "}
