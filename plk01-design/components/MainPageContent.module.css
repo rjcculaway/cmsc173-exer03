@@ -2,7 +2,7 @@
   display: flex;
   flex-grow: 1;
   background-size: cover;
-  background-position: 25% 50%;
+  background-position: 75% 50%;
 }
 
 .next_button {
@@ -21,6 +21,12 @@
   padding: 0.25rem 0.625rem 0.25rem 0.625rem;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1279px) {
+  .next_button {
+    bottom: 5rem;
+  }
+}
+
 .shop_button {
   transition: background-color 100ms ease;
   background: black;
@@ -37,5 +43,5 @@
 .next_button:hover {
   transition: background-color 100ms ease;
   background: var(--accent-color);
-  cursor: pointer; 
+  cursor: pointer;
 }

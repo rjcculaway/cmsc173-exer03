@@ -27,13 +27,14 @@
   margin: 0;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1279px){
-/* Styles */
+@media only screen and (min-device-width: 0px) and (max-device-width: 1279px) {
+  /* Styles */
   .product_glass_pane {
     top: 0;
     left: 0;
     margin: 1rem;
     top: 0rem;
+    padding: 0.25rem;
   }
 
   .product_heading {
@@ -41,8 +42,10 @@
   }
 
   .caption {
+    background: rgba(255, 255, 255, 0.625);
     font-size: 1rem;
     font-weight: 300;
+    backdrop-filter: blur(2px);
   }
 }
 
